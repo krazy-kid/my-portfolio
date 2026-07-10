@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" width="520" height="520" role="img" aria-label="Developer workstation with code editor and analytics dashboard">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3B82F6"/>
+      <stop offset="0.5" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1424"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <!-- glow ring -->
+  <circle cx="260" cy="260" r="210" fill="none" stroke="url(#grad)" stroke-width="1.5" opacity="0.35"/>
+  <circle cx="260" cy="260" r="170" fill="none" stroke="url(#grad)" stroke-width="1" opacity="0.25" stroke-dasharray="6 10"/>
+  <circle cx="260" cy="260" r="150" fill="url(#grad)" opacity="0.06" filter="url(#soft)"/>
+
+  <!-- main code window -->
+  <g>
+    <rect x="120" y="120" width="280" height="200" rx="16" fill="url(#screen)" stroke="url(#grad)" stroke-width="1.5"/>
+    <rect x="120" y="120" width="280" height="34" rx="16" fill="#0a1120"/>
+    <circle cx="140" cy="137" r="5" fill="#ef4444"/>
+    <circle cx="158" cy="137" r="5" fill="#f59e0b"/>
+    <circle cx="176" cy="137" r="5" fill="#22c55e"/>
+    <!-- code lines -->
+    <rect x="140" y="172" width="60" height="8" rx="4" fill="#8B5CF6"/>
+    <rect x="208" y="172" width="90" height="8" rx="4" fill="#3B82F6" opacity="0.8"/>
+    <rect x="156" y="192" width="120" height="8" rx="4" fill="#06B6D4" opacity="0.7"/>
+    <rect x="156" y="212" width="80" height="8" rx="4" fill="#64748b" opacity="0.7"/>
+    <rect x="140" y="232" width="70" height="8" rx="4" fill="#8B5CF6" opacity="0.7"/>
+    <rect x="218" y="232" width="100" height="8" rx="4" fill="#3B82F6" opacity="0.6"/>
+    <rect x="156" y="252" width="140" height="8" rx="4" fill="#06B6D4" opacity="0.6"/>
+    <rect x="140" y="286" width="90" height="8" rx="4" fill="#22c55e" opacity="0.7"/>
+  </g>
+
+  <!-- analytics card -->
+  <g>
+    <rect x="300" y="250" width="150" height="120" rx="14" fill="url(#screen)" stroke="url(#grad)" stroke-width="1.5"/>
+    <rect x="316" y="268" width="60" height="7" rx="3.5" fill="#94a3b8"/>
+    <!-- bars -->
+    <rect x="316" y="338" width="16" height="18" rx="3" fill="#3B82F6"/>
+    <rect x="340" y="322" width="16" height="34" rx="3" fill="#8B5CF6"/>
+    <rect x="364" y="306" width="16" height="50" rx="3" fill="#06B6D4"/>
+    <rect x="388" y="330" width="16" height="26" rx="3" fill="#3B82F6" opacity="0.8"/>
+    <rect x="412" y="312" width="16" height="44" rx="3" fill="#8B5CF6" opacity="0.8"/>
+    <!-- trend line -->
+    <polyline points="316,300 340,292 364,282 388,288 412,272 430,266" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- performance gauge -->
+  <g>
+    <rect x="88" y="300" width="120" height="90" rx="14" fill="url(#screen)" stroke="url(#grad)" stroke-width="1.5"/>
+    <circle cx="148" cy="345" r="30" fill="none" stroke="#1f2937" stroke-width="7"/>
+    <circle cx="148" cy="345" r="30" fill="none" stroke="url(#grad)" stroke-width="7" stroke-linecap="round" stroke-dasharray="150 188" transform="rotate(-90 148 345)"/>
+    <text x="148" y="351" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#e6ecff">95</text>
+  </g>
+
+  <!-- floating tokens -->
+  <g opacity="0.9">
+    <rect x="352" y="150" width="70" height="26" rx="13" fill="#050816" stroke="url(#grad)" stroke-width="1.2"/>
+    <text x="387" y="167" font-family="'Space Grotesk', Arial" font-size="12" text-anchor="middle" fill="#06B6D4">&lt;/&gt; JS</text>
+  </g>
+</svg>
