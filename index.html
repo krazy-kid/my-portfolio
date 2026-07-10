@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050816" />
+
+  <!-- Primary Meta Tags -->
+  <title>Prem Singh — Frontend Engineer &amp; CRO Specialist</title>
+  <meta name="title" content="Prem Singh — Frontend Engineer &amp; CRO Specialist" />
+  <meta name="description" content="Prem Singh is a Frontend Engineer and Conversion Rate Optimization specialist with 5+ years building high-performance landing pages, A/B tests, and enterprise web apps using JavaScript, TypeScript, Webflow, HubSpot, VWO and Optimizely." />
+  <meta name="author" content="Prem Singh" />
+  <meta name="keywords" content="Prem Singh, Frontend Engineer, CRO Specialist, Conversion Rate Optimization, JavaScript Developer, TypeScript, Webflow Developer, HubSpot Developer, VWO, Optimizely, Landing Pages, Performance Optimization, Maharashtra India" />
+  <link rel="canonical" href="https://premsingh.dev/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://premsingh.dev/" />
+  <meta property="og:title" content="Prem Singh — Frontend Engineer &amp; CRO Specialist" />
+  <meta property="og:description" content="5+ years crafting high-performance, conversion-focused web experiences. 30+ landing pages, 100+ experiments, 25% average performance gains." />
+  <meta property="og:image" content="https://premsingh.dev/assets/images/og-image.svg" />
+  <meta property="og:site_name" content="Prem Singh" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://premsingh.dev/" />
+  <meta name="twitter:title" content="Prem Singh — Frontend Engineer &amp; CRO Specialist" />
+  <meta name="twitter:description" content="5+ years crafting high-performance, conversion-focused web experiences. 30+ landing pages, 100+ experiments, 25% average performance gains." />
+  <meta name="twitter:image" content="https://premsingh.dev/assets/images/og-image.svg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
+
+  <!-- Preconnect + Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Tailwind CSS (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            base: '#050816',
+            card: '#111827',
+            accent: { blue: '#3B82F6', purple: '#8B5CF6', cyan: '#06B6D4' },
+          },
+          fontFamily: {
+            grotesk: ['"Space Grotesk"', 'sans-serif'],
+            inter: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Local Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Prem Singh",
+    "jobTitle": "Frontend Engineer & CRO Specialist",
+    "email": "mailto:premsingh.ps49@gmail.com",
+    "url": "https://premsingh.dev/",
+    "address": { "@type": "PostalAddress", "addressRegion": "Maharashtra", "addressCountry": "India" },
+    "sameAs": ["https://linkedin.com/in/premsingh98"],
+    "knowsAbout": ["Frontend Engineering", "Conversion Rate Optimization", "JavaScript", "TypeScript", "Webflow", "HubSpot", "VWO", "Optimizely", "Performance Optimization"]
+  }
+  </script>
+</head>
+
+<body class="font-inter antialiased">
+  <!-- ============ LOADING SCREEN ============ -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <div class="loader__logo">PS</div>
+      <div class="loader__bar"><span></span></div>
+      <p class="loader__text">Loading experience<span class="loader__dots"></span></p>
+    </div>
+  </div>
+
+  <!-- ============ CUSTOM CURSOR ============ -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ============ SCROLL PROGRESS ============ -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ============ BACKGROUND LAYERS ============ -->
+  <div class="bg-layer" aria-hidden="true">
+    <canvas id="particles" class="particles-canvas"></canvas>
+    <div class="blob blob--blue"></div>
+    <div class="blob blob--purple"></div>
+    <div class="blob blob--cyan"></div>
+    <div class="grid-overlay"></div>
+    <div class="spotlight" id="spotlight"></div>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header id="navbar" class="navbar">
+    <nav class="navbar__inner" aria-label="Primary">
+      <a href="#hero" class="navbar__brand" aria-label="Prem Singh home">
+        <span class="navbar__brand-mark">PS</span>
+        <span class="navbar__brand-name">Prem Singh</span>
+      </a>
+
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="navbar__actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle color theme" title="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="assets/resume.pdf" download class="btn btn--ghost navbar__resume" data-magnetic>
+          <i class="fa-solid fa-download"></i><span>Resume</span>
+        </a>
+        <button id="menuToggle" class="icon-btn navbar__burger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="hero" class="section hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <h1 class="hero__title" data-aos="fade-up" data-aos-delay="80">
+            Hi, I'm <span class="text-gradient">Prem Singh</span>
+          </h1>
+          <h2 class="hero__headline" data-aos="fade-up" data-aos-delay="140">
+            Frontend Engineer · CRO Specialist ·
+            <span class="hero__typed-wrap">I build <span id="typed" class="text-gradient-cyan"></span></span>
+          </h2>
+          <p class="hero__desc" data-aos="fade-up" data-aos-delay="200">
+            Performance-focused web developer turning ambitious ideas into fast, accessible and
+            high-converting experiences. I blend clean engineering with rigorous experimentation to
+            help enterprise teams ship pages that load quickly and convert measurably better.
+          </p>
+
+          <div class="hero__cta" data-aos="fade-up" data-aos-delay="260">
+            <a href="assets/resume.pdf" download class="btn btn--primary" data-magnetic>
+              <i class="fa-solid fa-download"></i> Download Resume
+            </a>
+            <a href="#projects" class="btn btn--outline" data-magnetic>
+              <i class="fa-solid fa-layer-group"></i> View Projects
+            </a>
+            <a href="#contact" class="btn btn--ghost" data-magnetic>
+              <i class="fa-solid fa-paper-plane"></i> Contact Me
+            </a>
+          </div>
+
+          <div class="hero__stats" data-aos="fade-up" data-aos-delay="320">
+            <div class="stat">
+              <span class="stat__num" data-count="5" data-suffix="+">0</span>
+              <span class="stat__label">Years Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="30" data-suffix="+">0</span>
+              <span class="stat__label">Landing Pages</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="100" data-suffix="+">0</span>
+              <span class="stat__label">Experiments</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="25" data-suffix="%">0</span>
+              <span class="stat__label">Performance Gain</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual" data-aos="fade-left" data-aos-delay="200">
+          <div class="hero__orb" data-tilt>
+            <img src="assets/images/hero-illustration.svg" alt="Illustration of a developer workstation with code and analytics" class="hero__illustration" width="520" height="520" loading="eager" />
+            <div class="hero__glow"></div>
+          </div>
+          <div class="float-icon float-icon--js" data-float><i class="fa-brands fa-js"></i></div>
+          <div class="float-icon float-icon--react" data-float><i class="fa-brands fa-react"></i></div>
+          <div class="float-icon float-icon--html" data-float><i class="fa-brands fa-html5"></i></div>
+          <div class="float-icon float-icon--css" data-float><i class="fa-brands fa-css3-alt"></i></div>
+          <div class="float-icon float-icon--figma" data-float><i class="fa-brands fa-figma"></i></div>
+          <div class="float-icon float-icon--git" data-float><i class="fa-brands fa-git-alt"></i></div>
+        </div>
+      </div>
+
+      <a href="#about" class="hero__scroll" aria-label="Scroll to about">
+        <span class="mouse"><span class="wheel"></span></span>
+        <span>Scroll</span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <div class="container">
+        <header class="section-head" data-aos="fade-up">
+          <span class="section-tag">01 — About</span>
+          <h2 class="section-title">Engineering that <span class="text-gradient">converts</span></h2>
+        </header>
+
+        <div class="about__grid">
+          <div class="about__text" data-aos="fade-up" data-aos-delay="80">
+            <p>
+              I'm a <strong>Frontend Engineer</strong> with <strong>5+ years</strong> of experience
+              building performant, conversion-focused web experiences for enterprise clients. My work
+              lives at the intersection of clean engineering and data-driven design — I write
+              maintainable <strong>JavaScript</strong> and <strong>TypeScript</strong>, and I obsess
+              over Core Web Vitals, accessibility and pixel-accurate execution.
+            </p>
+            <p>
+              I lead <strong>Conversion Rate Optimization</strong> builds,
+              shipping <strong>30+ landing pages</strong> and running weekly experiments across
+              <strong>VWO</strong>, <strong>Optimizely</strong> and <strong>Mutiny</strong>. I develop
+              inside <strong>HubSpot</strong> and <strong>Webflow</strong>, mentor teammates through code
+              reviews, and use modern AI-assisted workflows (Cursor AI + MCP) to move faster without
+              cutting quality.
+            </p>
+            <ul class="about__highlights">
+              <li><i class="fa-solid fa-bolt"></i> Performance-first: measurable Core Web Vitals wins</li>
+              <li><i class="fa-solid fa-flask"></i> Experiment-driven: hypotheses backed by real data</li>
+              <li><i class="fa-solid fa-universal-access"></i> Accessible &amp; semantic by default</li>
+              <li><i class="fa-solid fa-people-group"></i> Cross-functional collaboration &amp; mentorship</li>
+            </ul>
+          </div>
+
+          <aside class="about__card glass" data-aos="fade-up" data-aos-delay="160" data-tilt>
+            <div class="about__avatar">PS</div>
+            <h3>Prem Singh</h3>
+            <p class="about__role">Frontend Engineer &amp; CRO Specialist</p>
+            <ul class="about__meta">
+              <li><i class="fa-solid fa-location-dot"></i> Maharashtra, India</li>
+              <li><i class="fa-solid fa-briefcase"></i> Frontend Developer</li>
+              <li><i class="fa-solid fa-graduation-cap"></i> B.E. Information Technology</li>
+            </ul>
+            <div class="about__focus">
+              <span>CRO</span><span>Webflow</span><span>HubSpot</span><span>Performance</span><span>TypeScript</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS / TECH STACK ============ -->
+    <section id="skills" class="section">
+      <div class="container">
+        <header class="section-head" data-aos="fade-up">
+          <span class="section-tag">02 — Tech Stack</span>
+          <h2 class="section-title">Tools I use to <span class="text-gradient">ship</span></h2>
+          <p class="section-sub">A pragmatic toolkit spanning frontend engineering, experimentation platforms and modern CMS.</p>
+        </header>
+
+        <div class="skills__grid">
+          <article class="skill-card glass" data-aos="fade-up" data-tilt>
+            <div class="skill-card__icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Frontend</h3>
+            <ul class="chips">
+              <li>HTML5</li><li>CSS3</li><li>SCSS</li><li>JavaScript</li><li>TypeScript</li>
+              <li>React (Basic)</li><li>AJAX</li><li>jQuery</li>
+            </ul>
+          </article>
+
+          <article class="skill-card glass" data-aos="fade-up" data-aos-delay="80" data-tilt>
+            <div class="skill-card__icon"><i class="fa-solid fa-flask-vial"></i></div>
+            <h3>CRO &amp; Experimentation</h3>
+            <ul class="chips">
+              <li>VWO</li><li>Optimizely</li><li>Mutiny</li><li>AB Tasty</li><li>Google Optimize</li>
+            </ul>
+          </article>
+
+          <article class="skill-card glass" data-aos="fade-up" data-aos-delay="160" data-tilt>
+            <div class="skill-card__icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h3>CMS &amp; Platforms</h3>
+            <ul class="chips">
+              <li>HubSpot</li><li>Webflow</li><li>WordPress</li><li>Unbounce</li>
+            </ul>
+          </article>
+
+          <article class="skill-card glass" data-aos="fade-up" data-aos-delay="240" data-tilt>
+            <div class="skill-card__icon"><i class="fa-solid fa-toolbox"></i></div>
+            <h3>Tools &amp; Workflow</h3>
+            <ul class="chips">
+              <li>Git</li><li>GitHub</li><li>GitLab</li><li>Figma</li><li>Adobe XD</li>
+              <li>Zeplin</li><li>Cursor AI</li><li>MCP</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="section">
+      <div class="container">
+        <header class="section-head" data-aos="fade-up">
+          <span class="section-tag">03 — Experience</span>
+          <h2 class="section-title">Where I've made <span class="text-gradient">impact</span></h2>
+        </header>
+
+        <div class="timeline">
+          <article class="timeline__item" data-aos="fade-up">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card glass" data-tilt>
+              <div class="timeline__top">
+                <div>
+                  <h3>Frontend Developer</h3>
+                  <p class="timeline__company">Frontend Engineering &amp; CRO</p>
+                </div>
+                <span class="timeline__period">2022 — Present</span>
+              </div>
+              <ul class="timeline__points">
+                <li>Built <strong>30+ high-converting landing pages</strong> for enterprise clients across Webflow, HubSpot and Unbounce.</li>
+                <li>Design &amp; ship <strong>3+ A/B experiments every week</strong> using VWO, Optimizely and Mutiny.</li>
+                <li>Act as <strong>technical lead</strong> — owning code reviews, coding standards and mentorship.</li>
+                <li>Accelerated delivery with <strong>Cursor AI + MCP</strong> workflows without sacrificing quality.</li>
+                <li>Partner cross-functionally with designers, PMs and analysts to turn hypotheses into wins.</li>
+              </ul>
+              <div class="chips chips--muted">
+                <li>Webflow</li><li>HubSpot</li><li>Unbounce</li><li>VWO</li><li>Optimizely</li><li>Mutiny</li>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline__item" data-aos="fade-up" data-aos-delay="100">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card glass" data-tilt>
+              <div class="timeline__top">
+                <div>
+                  <h3>Web Developer</h3>
+                  <p class="timeline__company">Enterprise Web Applications</p>
+                </div>
+                <span class="timeline__period">2020 — 2022</span>
+              </div>
+              <ul class="timeline__points">
+                <li>Developed <strong>enterprise web applications</strong> within the <strong>.NET ecosystem</strong>.</li>
+                <li>Built responsive UIs with <strong>HTML, SCSS, JavaScript and AJAX</strong>.</li>
+                <li>Delivered a <strong>25% performance improvement</strong> through optimization and refactoring.</li>
+                <li>Maintained a disciplined <strong>Git workflow</strong> with feature branches and reviews.</li>
+                <li>Joined <strong>client meetings</strong> to translate requirements into technical solutions.</li>
+              </ul>
+              <div class="chips chips--muted">
+                <li>.NET</li><li>HTML</li><li>SCSS</li><li>JavaScript</li><li>AJAX</li><li>Git</li>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <header class="section-head" data-aos="fade-up">
+          <span class="section-tag">04 — Projects</span>
+          <h2 class="section-title">Selected <span class="text-gradient">work</span></h2>
+          <p class="section-sub">Representative builds from my CRO and frontend engineering practice.</p>
+        </header>
+
+        <div class="projects__grid">
+          <!-- Project 1 -->
+          <article class="project-card glass" data-aos="fade-up" data-tilt>
+            <div class="project-card__media">
+              <img src="assets/images/project-1.svg" alt="Enterprise landing pages preview" loading="lazy" width="640" height="400" />
+            </div>
+            <div class="project-card__body">
+              <h3>Enterprise Landing Pages</h3>
+              <p>A reusable, component-driven landing-page system for enterprise SaaS clients — pixel-perfect, accessible and tuned for Core Web Vitals.</p>
+              <ul class="chips chips--muted">
+                <li>Webflow</li><li>JavaScript</li><li>SCSS</li><li>GSAP</li>
+              </ul>            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card glass" data-aos="fade-up" data-aos-delay="80" data-tilt>
+            <div class="project-card__media">
+              <img src="assets/images/project-2.svg" alt="Conversion rate optimization platform preview" loading="lazy" width="640" height="400" />
+            </div>
+            <div class="project-card__body">
+              <h3>Conversion Rate Optimization Platform</h3>
+              <p>An experimentation workflow that manages hypotheses, variant code and results across VWO and Optimizely, with a shared component library.</p>
+              <ul class="chips chips--muted">
+                <li>TypeScript</li><li>VWO</li><li>Optimizely</li><li>AJAX</li>
+              </ul>            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card glass" data-aos="fade-up" data-aos-delay="160" data-tilt>
+            <div class="project-card__media">
+              <img src="assets/images/project-3.svg" alt="Performance optimization dashboard preview" loading="lazy" width="640" height="400" />
+            </div>
+            <div class="project-card__body">
+              <h3>Performance Optimization Dashboard</h3>
+              <p>A monitoring dashboard visualizing Lighthouse scores, LCP/CLS trends and bundle sizes to keep pages fast release after release.</p>
+              <ul class="chips chips--muted">
+                <li>JavaScript</li><li>Web Vitals</li><li>Charts</li><li>CSS3</li>
+              </ul>            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card glass" data-aos="fade-up" data-aos-delay="80" data-tilt>
+            <div class="project-card__media">
+              <img src="assets/images/project-4.svg" alt="HubSpot marketing experience preview" loading="lazy" width="640" height="400" />
+            </div>
+            <div class="project-card__body">
+              <h3>HubSpot Marketing Experience</h3>
+              <p>Custom HubSpot themes and modules powering campaign landing pages, email templates and dynamic personalization for marketing teams.</p>
+              <ul class="chips chips--muted">
+                <li>HubSpot</li><li>HubL</li><li>JavaScript</li><li>SCSS</li>
+              </ul>            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card glass" data-aos="fade-up" data-aos-delay="160" data-tilt>
+            <div class="project-card__media">
+              <img src="assets/images/project-5.svg" alt="Webflow landing system preview" loading="lazy" width="640" height="400" />
+            </div>
+            <div class="project-card__body">
+              <h3>Webflow Landing System</h3>
+              <p>A scalable Webflow design system with reusable symbols, interactions and a CMS-driven content model for rapid campaign launches.</p>
+              <ul class="chips chips--muted">
+                <li>Webflow</li><li>CMS</li><li>GSAP</li><li>Interactions</li>
+              </ul>            </div>
+          </article>
+
+          <!-- CTA card -->
+          <article class="project-card project-card--cta glass" data-aos="fade-up" data-aos-delay="240" data-tilt>
+            <div class="project-card__body project-card__body--center">
+              <i class="fa-solid fa-code-branch project-card__cta-icon"></i>
+              <h3>More on GitHub</h3>
+              <p>Explore experiments, snippets and open-source contributions.</p>
+              <a href="https://github.com/premsingh98" target="_blank" rel="noopener" class="btn btn--primary btn--sm" data-magnetic><i class="fa-brands fa-github"></i> Visit Profile</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services" class="section">
+      <div class="container">
+        <header class="section-head" data-aos="fade-up">
+          <span class="section-tag">05 — Services</span>
+          <h2 class="section-title">How I can <span class="text-gradient">help</span></h2>
+        </header>
+
+        <div class="services__grid">
+          <article class="service-card glass" data-aos="zoom-in" data-tilt>
+            <i class="fa-solid fa-code service-card__icon"></i>
+            <h3>Frontend Development</h3>
+            <p>Clean, accessible, component-driven UIs built with modern JavaScript and TypeScript.</p>
+          </article>
+          <article class="service-card glass" data-aos="zoom-in" data-aos-delay="60" data-tilt>
+            <i class="fa-solid fa-rocket service-card__icon"></i>
+            <h3>Landing Pages</h3>
+            <p>High-converting, pixel-perfect landing pages designed to load fast and convert.</p>
+          </article>
+          <article class="service-card glass" data-aos="zoom-in" data-aos-delay="120" data-tilt>
+            <i class="fa-solid fa-gauge-high service-card__icon"></i>
+            <h3>Performance Optimization</h3>
+            <p>Core Web Vitals tuning, lazy loading and bundle trimming for measurable speed gains.</p>
+          </article>
+          <article class="service-card glass" data-aos="zoom-in" data-aos-delay="180" data-tilt>
+            <i class="fa-solid fa-flask-vial service-card__icon"></i>
+            <h3>A/B Testing</h3>
+            <p>End-to-end experiment builds and analysis across VWO, Optimizely and Mutiny.</p>
+          </article>
+          <article class="service-card glass" data-aos="zoom-in" data-tilt>
+            <i class="fa-brands fa-webflow service-card__icon"></i>
+            <h3>Webflow Development</h3>
+            <p>Scalable Webflow systems with reusable symbols, CMS and rich interactions.</p>
+          </article>
+          <article class="service-card glass" data-aos="zoom-in" data-aos-delay="60" data-tilt>
+            <i class="fa-brands fa-hubspot service-card__icon"></i>
+            <h3>HubSpot Development</h3>
+            <p>Custom themes, modules and personalization for marketing-driven websites.</p>
+          </article>
+          <article class="service-card glass" data-aos="zoom-in" data-aos-delay="120" data-tilt>
+            <i class="fa-solid fa-chart-line service-card__icon"></i>
+            <h3>CRO Engineering</h3>
+            <p>Turning hypotheses into shippable, measurable experiments that grow revenue.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ACHIEVEMENTS ============ -->
+    <section id="achievements" class="section">
+      <div class="container">
+        <div class="achievements glass" data-aos="fade-up">
+          <div class="achievement">
+            <span class="achievement__num" data-count="30" data-suffix="+">0</span>
+            <span class="achievement__label">Landing Pages</span>
+          </div>
+          <div class="achievement">
+            <span class="achievement__num" data-count="100" data-suffix="+">0</span>
+            <span class="achievement__label">Experiments</span>
+          </div>
+          <div class="achievement">
+            <span class="achievement__num" data-count="5" data-suffix="+">0</span>
+            <span class="achievement__label">Years</span>
+          </div>
+          <div class="achievement">
+            <span class="achievement__num" data-count="25" data-suffix="%">0</span>
+            <span class="achievement__label">Performance Improvement</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section">
+      <div class="contact__map" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section-head" data-aos="fade-up">
+          <span class="section-tag">06 — Contact</span>
+          <h2 class="section-title">Let's build something <span class="text-gradient">great</span></h2>
+          <p class="section-sub">Have a project or role in mind? I'd love to hear about it.</p>
+        </header>
+
+        <div class="contact__grid">
+          <div class="contact__info" data-aos="fade-up">
+            <a href="mailto:premsingh.ps49@gmail.com" class="contact__item glass" data-magnetic>
+              <i class="fa-solid fa-envelope"></i>
+              <div><span>Email</span><strong>premsingh.ps49@gmail.com</strong></div>
+            </a>
+            <a href="https://linkedin.com/in/premsingh98" target="_blank" rel="noopener" class="contact__item glass" data-magnetic>
+              <i class="fa-brands fa-linkedin"></i>
+              <div><span>LinkedIn</span><strong>/in/premsingh98</strong></div>
+            </a>
+            <div class="contact__item glass">
+              <i class="fa-solid fa-location-dot"></i>
+              <div><span>Location</span><strong>Maharashtra, India</strong></div>
+            </div>
+            <div class="contact__socials">
+              <a href="https://linkedin.com/in/premsingh98" target="_blank" rel="noopener" aria-label="LinkedIn" data-magnetic><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://github.com/premsingh98" target="_blank" rel="noopener" aria-label="GitHub" data-magnetic><i class="fa-brands fa-github"></i></a>
+              <a href="mailto:premsingh.ps49@gmail.com" aria-label="Email" data-magnetic><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <form class="contact__form glass" id="contactForm" data-aos="fade-up" data-aos-delay="100" novalidate>
+            <div class="field">
+              <input type="text" id="name" name="name" required placeholder=" " />
+              <label for="name">Your name</label>
+            </div>
+            <div class="field">
+              <input type="email" id="email" name="email" required placeholder=" " />
+              <label for="email">Email address</label>
+            </div>
+            <div class="field">
+              <input type="text" id="subject" name="subject" placeholder=" " />
+              <label for="subject">Subject</label>
+            </div>
+            <div class="field">
+              <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+              <label for="message">Your message</label>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block" data-magnetic>
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#hero" class="footer__brand"><span class="navbar__brand-mark">PS</span> Prem Singh</a>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer__copy">© <span id="year"></span> Prem Singh</p>
+    </div>
+  </footer>
+
+  <!-- ============ BACK TO TOP ============ -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+
+  <script src="assets/js/particles.js" defer></script>
+  <script src="assets/js/cursor.js" defer></script>
+  <script src="assets/js/typing.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
